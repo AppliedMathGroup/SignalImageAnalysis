@@ -6,6 +6,8 @@ MATLAB function using the Square Wave Method (SWM) for time series and signal an
 
 The MATLAB® command described here performs a time series analysis using the Square Wave Transform (SWT)<sup>1</sup>, and is accessible from the MATLAB interface under the name `swt`.
 
+A new version of the command, programmed in the C programming language for the use by people without MATLAB, has been published under the name `swt.c`. It has library level dependencies on the BLAS and LAPACK libraries.
+
 `swt` is a user-defined function that requires three parameters to work properly. The first parameter `V` corresponds to the time series to be analyzed, input as a standard MATLAB vector. The second parameter `f` corresponds to the sampling frequency in Hz of the data in parameter `V`. Finally, the third parameter `Dt` corresponds to the time interval in seconds of the entire data set. 
 
 The outputs are a two-column matrix `S`, and a single numerical value that indicates the approximation quality, referred to as `Dm`. The matrix `S` will have a row for each data value in the input data set, in which the value in the first column correspond to the square wave frequency (f<sub>i</sub> in the published paper) and the value in the second column corresponds to the square wave coefficient (C<sub>i</sub> in the published paper).
